@@ -1,0 +1,363 @@
+/*header*/
+
+.lf-header-bg {
+    background-color: #0892fd;
+}
+
+.rh-header-bg {
+    background-color: #eeeeee;
+}
+
+.border-right-warninig {
+    border-right: 7px #e0ac00 solid;
+    height: 100px;
+}
+
+.nav-links ul li {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+
+.nav-links ul li .nav-link:hover {
+    color: white !important;
+}
+
+.btn-lg {
+    font-family: 'inherit';
+    font-weight: 00 !important;
+}
+
+.navbar-brand img {
+    left: 35px;
+    position: relative;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav.navbar {
+    height: 100px;
+}
+
+.navbar-toggler {
+    margin-right: 25px;
+}
+
+@media only screen and (max-width: 991px) {
+    button.navbar-toggler {
+        position: relative;
+        top: 30px;
+    }
+    .border-right-warninig {
+        border: none;
+    }
+    .lf-header-bg {
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+    }
+    .rh-header-bg {
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+    }
+    .navbar-brand img {
+        left: 10;
+        position: relative;
+    }
+    .nav-links ul li .nav-link:hover {
+        color: rgb(84, 168, 247) !important;
+    }
+    a.btn-contact {
+        background-color: rgb(32, 32, 32) !important;
+        color: rgb(255, 255, 255) !important;
+    }
+    /*slider header and p*/
+    .carousel-caption h3 {
+        font-size: 4rem !important;
+    }
+    .carousel-caption p {
+        font-size: 2rem !important;
+    }
+    div.paragraph-container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1111px) {
+    .navbar-brand img {
+        left: 5px;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .navbar-brand img {
+        left: 5px;
+        position: relative;
+    }
+    button.navbar-toggler {
+        position: relative;
+        top: 30px;
+    }
+    a.btn-contact {
+        background-color: rgb(32, 32, 32) !important;
+        color: rgb(255, 255, 255) !important;
+    }
+    /*slider header and p*/
+    .carousel-caption h3 {
+        font-size: 2.5rem !important;
+    }
+    .carousel-caption p {
+        font-size: 1.5rem !important;
+    }
+}
+
+
+/******* header ends here *******/
+
+
+/*slider options*/
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 200px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    font-size: 5rem;
+}
+
+.carousel-caption p {
+    font-size: 2rem;
+}
+
+.text-center h1.paragraph-h1 {
+    font-family: inherit;
+    color: #1f1f1f;
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    font-weight: bold;
+}
+
+h1.paragraph-h1-white {
+    font-weight: bold !important;
+    font-family: inherit !important;
+}
+
+span.paragraph-h1-first-letter {
+    color: #0892fd;
+}
+
+p.leading-paragraph {
+    font-size: 20px;
+    color: #605f5f;
+}
+
+.bg-blue-dark {
+    background: #00284d;
+}
+
+.bg-blue {
+    background-color: #07528d;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
+.bg-footer-bottom {
+    background-color: #00203b;
+    color: #1a242e;
+}
+
+
+/*end slider options*/
+
+
+/*footer styles*/
+
+div span.contactus-footer {
+    font-size: 21px;
+    font-family: 'inherit' !important;
+    font-weight: 500px;
+    padding-top: 24px;
+}
+
+span.footer-location-icon p,
+span.footer-phone-icon p,
+span.footer-email-icon p {
+    font-size: 18px;
+    font-family: 'inherit';
+    color: #f1f1f1;
+}
+
+span.footer-location-icon i,
+span.footer-phone-icon i,
+span.footer-email-icon i {
+    font-size: 30px;
+    color: #f1f1f1;
+}
+
+a.social-media {
+    width: 45px;
+    height: 45px;
+    left: 50%;
+    background: #fff;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+a.social-media i {
+    color: black;
+    font-size: 16px;
+    padding-top: 14px;
+}
+
+
+/*footer styles end here*/
+
+
+/*bootstrap styles overwritten*/
+
+.carousel-indicators li {
+    height: 10px !important;
+    width: 30px !important;
+}
+
+
+/*bootstrap styles overwritten ends here*/
+
+
+/*project slider styles*/
+
+.controls-top {
+    margin: 25px;
+    font-size: 25px;
+}
+
+.controls-top a.btn-floating {
+    background: #07528d;
+    width: 45px;
+    height: 45px;
+    left: 50%;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+a.btn-floating i {
+    color: #eeeeee;
+    padding-top: 10px;
+}
+
+
+/*project slider styles end here*/
+
+
+/*styles for custom FAB*/
+
+.fab-container {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.fab-icon-holder {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #016fb9;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.fab-icon-holder:hover {
+    opacity: 0.8;
+}
+
+.fab-icon-holder i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.fab-container .fab {
+    width: 60px;
+    height: 60px;
+    background: #000000;
+}
+
+.fab-options {
+    list-style-type: none;
+    margin: 0;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: scale(0);
+    transform-origin: 85% bottom;
+}
+
+.fab:hover+.fab-options,
+.fab-options:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fab-options li {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.fab-label {
+    padding: 2px 5px;
+    align-self: center;
+    user-select: none;
+    white-space: nowrap;
+    border-radius: 3px;
+    font-size: 16px;
+    background: #666666;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+
+
+/*styles for a custom FAB ends here*/
+
+
+/*form styles*/
+
+textarea {
+    background: black;
+    color: black;
+    resize: none;
+    border: 0 none;
+    width: 100%;
+    font-size: 5em;
+    outline: none;
+    height: 100%;
+    position: absolute;
+}
+
+
+/*form styles end here*/
