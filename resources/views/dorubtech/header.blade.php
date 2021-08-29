@@ -18,12 +18,12 @@
         <title>Dorubtech</title>
 </head>
 <body>
-  
+
   <!-- As a heading -->
   <nav class="navbar navbar-expand-lg navbar-light lf-header-bg p-0 fixed-top">
    <div class="col-lg-3 rh-header-bg border-right-warninig">
     <a class="navbar-brand" href="#">
-      <img class="center-block" src="/img/logo-test.png" alt="">
+      <img class="center-block header-logo" src="/img/dorubtech_logo.png" alt="">
     </a>
     <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
             <ul class="navbar-nav">
               <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li> 
+              </li>
               <li class="nav-item active">
                 <a class="nav-link" href="#">about us</a>
               </li>
@@ -64,16 +64,21 @@
         <div class="carousel-caption">
           <h3>Welcome to Dorubtech</h3>
           <p>We had such a great time in LA!, We had such a great time in LA! We had such a great time in LA!</p>
-          <button class="btn btn-lg btn-light mt-3">read more</button>
-        </div>   
+          <button class="btn btn-read-more mt-3">
+              READ MORE
+              <i class="ml-3 fas fa-angle-double-right"></i>
+          </button>
+        </div>
       </div>
       <div class="carousel-item">
         <img src="/img/jalot.jpg" class="w-100" alt="Chicago" height="650">
         <div class="carousel-caption">
           <h3>Welcome to Dorubtech</h3>
           <p>We had such a great time in LA!, We had such a great time in LA! We had such a great time in LA!</p>
-          <button class="btn btn-lg btn-light mt-3" >read more </button>
-        </div>   
+          <buttonclass="btn btn-read-more mt-3">
+            READ MORE
+            <i class="ml-3 fas fa-angle-double-right"></i></button>
+        </div>
       </div>
     </div>
   </div>
@@ -145,9 +150,9 @@
           </div>
           <div class="col-lg-5 offset-1">
             <a href="http://www.freepik.com">
-              <img class="w-100" src="/img/sawage.png" alt="">
+              <img class="w-100" src="/img/burn.png" alt="">
             </a>
-            
+
           </div>
         </div>
       </div>
@@ -225,7 +230,7 @@
           </div>
         </div>
       </div>
-      
+
        <div class="col-md-3" style="float:left">
        <div class="card mb-2">
           <img class="card-img-top"
@@ -283,7 +288,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
@@ -337,6 +342,73 @@
 </div>
 <!--FAB ENDS HERE !-->
 
+
+
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-6 col-sm-11 col-xs-11">
+                  <form action="">
+                      <div class="row">
+                          <div class="col-lg col-md col-sm-12 col-xs-12 form-group">
+                              <input class="text-white form-control bg-dark d-inline float-left" type="text" name="" id="" placeholder="Your name">
+                          </div>
+                          <div class="col-lg col-md col-sm-12 col-xs-12 form-group">
+                              <input class="text-white form-control bg-dark d-inline float-right" type="text" placeholder="Your email">
+                          </div>
+                      </div>
+                      <div class="row ">
+                          <div class="col-lg col-md col-sm-12 col-xs-12 text-center form-group">
+                              <input class=" text-white form-control bg-dark" type="text" name="" id="" placeholder="Your number">
+                          </div>
+                      </div>
+                      <div class=" row form-group justify-content-center">
+                          <div class="col-lg-12 col-md col-sm-12 col-xs-12 ">
+                              <textarea class="text-white form-control bg-dark " id="exampleFormControlTextarea1" rows="5" placeholder="your message here..."></textarea>
+                          </div>
+                      </div>
+                      <div class="row justify-content-center">
+                          <div class="col-lg-6 col-md col-sm-12 col-xs-12 text-center">
+                              <input class="text-white btn btn-primary" id="btn_contact" type="button" value="send message">
+                          </div>
+                      </div>
+
+                  </form>
+              </div>
+              <div class="col-lg-5 mt-4">
+                  <div class="row">
+                      <div class="col-2">
+                          <a class="form-contacts"><i class="fas fa-location-arrow"></i></a>
+                      </div>
+                      <div class="col">
+                          <b>Address</b>
+                          <p>the adress of the comopany goes here....</p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-2">
+                          <a class="form-contacts"><i class="fas fa-envelope"></i></a>
+                      </div>
+                      <div class="col">
+                          <b>Email</b>
+                          <p>the email of the comopany goes here....</p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-2">
+                          <a class="form-contacts"><i class="fas fa-phone-volume"></i></a>
+                      </div>
+                      <div class="col">
+                          <b>Phone number</b>
+                          <p>the phone numbers of the comopany goes here....</p>
+                      </div>
+                  </div>
+
+              </div>
+
+          </div>
+      </div>
+
+
   <!-- Footer -->
 <footer class="page-footer font-small bg-blue-dark text-white pt-4">
 
@@ -345,8 +417,8 @@
 
 
     <div class="row">
-      <div class="col justify-content-center">
-        <img class="center-block" src="/img/footer_logo.png" alt="">
+      <div class="col-lg col-md col-sm justify-content-center">
+        <img class="center-block" src="/img/logo_footer.png" alt="" width="300" height="180">
       </div>
     </div>
 

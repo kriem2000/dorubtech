@@ -1,5 +1,29 @@
 /*header*/
 
+img.header-logo{
+    width: 200px;
+    height: 100px;
+}
+
+.btn-read-more{
+    background: #f8fafc;
+    font-family: revert;
+    font-size: 18px;
+    size: 3rem;
+    font-weight: 500;
+    border: none;
+}
+
+.btn-read-more:hover{
+    background: #0892fd;
+    font-family: revert;
+    color: white;
+    font-size: 18px;
+    size: 3rem;
+    font-weight: 500;
+    border: none;
+}
+
 .lf-header-bg {
     background-color: #0892fd;
 }
@@ -347,17 +371,24 @@ a.btn-floating i {
 
 /*form styles*/
 
-textarea {
-    background: black;
-    color: black;
-    resize: none;
-    border: 0 none;
-    width: 100%;
-    font-size: 5em;
-    outline: none;
-    height: 100%;
-    position: absolute;
+.row .form-group .form-control::placeholder{
+    color: floralwhite;
 }
 
+a.form-contacts {
+    width: 45px;
+    height: 45px;
+    left: 60%;
+    background: #3490dc;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+a.form-contacts i {
+    color: white;
+    font-size: 18px;
+    padding-top: 14px;
+    padding-left: 13px;
+}
 
 /*form styles end here*/
