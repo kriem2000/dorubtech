@@ -109,9 +109,7 @@ nav.navbar {
     .carousel-caption p {
         font-size: 2rem !important;
     }
-    div.paragraph-container {
-        display: none;
-    }
+
 }
 
 @media only screen and (max-width:1111px) {
@@ -152,7 +150,7 @@ nav.navbar {
 .carousel-caption {
     position: absolute;
     right: 15%;
-    bottom: 200px;
+    bottom: 160px;
     left: 15%;
     z-index: 10;
     padding-top: 20px;

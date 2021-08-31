@@ -38,6 +38,8 @@ window.onscroll = function() {
             links[i].removeEventListener("mouseout", change_bg_to_white, false);
             links[i].style.backgroundColor = "#0892fd";
         }
+    }else if(window.screen.width < 700){
+        Fab_container.style.display = "none";
     }
 }
 
