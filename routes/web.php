@@ -13,13 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//for admin and managers
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::group(["prefix"=>"dashboadr","middleware"=>"auth"],function(){
+    Route::get("/manageContent",function (){
+        return view("dorubtechAdmin.manageContentPage");
+    })->name("manageContent");
+});
+
 require __DIR__.'/auth.php';
-
-
 
 /*
  * <?php
@@ -37,6 +42,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//for guestes user
 Route::group([],function(){
     //root
     Route::get("/",function(){
@@ -69,6 +75,6 @@ Route::group([],function(){
 
 });
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
