@@ -1,17 +1,24 @@
-.col div.manage-card{
+.col div.manage-card {
     background-color: #e1f1ff;
 }
 
-.col div.manage-card:hover{
+.col div.manage-card:hover {
     cursor: pointer;
-    color: white;
+    color: white !important;
     background-color: #6cb2eb;
-    -webkit-transition: color , background-color 1000ms linear;
-    -ms-transition:color , background-color 1000ms linear;
-    transition: color , background-color 1000ms linear;
+    -webkit-transition: color, background-color 1000ms linear;
+    -ms-transition: color, background-color 1000ms linear;
+    transition: color, background-color 1000ms linear;
 }
 
+.col div.manage-card:hover a {
+    cursor: pointer;
+    color: white !important;
+    -webkit-transition: color, background-color 1000ms linear;
+    -ms-transition: color, background-color 1000ms linear;
+    transition: color, background-color 1000ms linear;
+}
 
-
-
-
+.col div.manage-card a:hover {
+    text-decoration: none;
+}

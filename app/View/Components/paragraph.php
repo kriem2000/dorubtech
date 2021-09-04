@@ -11,9 +11,15 @@ class paragraph extends Component
      *
      * @return void
      */
-    public function __construct()
+
+     public $boldtitle;
+     public $normaltitle;
+     public $body;
+    public function __construct($bold,$normal,$body)
     {
-        //
+        $this->boldtitle = $bold;
+        $this->normaltitle = $normal;
+        $this->body=$body;
     }
 
     /**

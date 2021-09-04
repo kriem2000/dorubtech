@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ParagraphController;
+use App\Http\Controllers\ServiceController;
+use App\Models\Paragraph;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//post request for admin
+Route::post("/modify_aboutus",[ParagraphController::class,"modify_aboutus"]);
+Route::post("/add_service",[ServiceController::class,"create"]);
+
+
 //for admin and managers
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -22,7 +30,13 @@ Route::group(["prefix"=>"dashboadr","middleware"=>"auth"],function(){
     Route::get("/manageContent",function (){
         return view("dorubtechAdmin.manageContentPage");
     })->name("manageContent");
+
+    Route::get("/aboutus",[ParagraphController::class,"get_aboutus"])->name("aboutus-admin");
+    Route::get("/addservice",function(){
+        return view("dorubtechAdmin.addService");
+    })->name("addservice");
 });
+
 
 require __DIR__.'/auth.php';
 
@@ -52,9 +66,7 @@ Route::group([],function(){
     //all routes under home page..
     Route::group(["prefix"=>"/home"],function (){
         //about us
-        Route::get("/about-us",function (){
-            return view("dorubtech.aboutUs");
-        })->name("aboutUs") ;
+        Route::get("/about-us",[ParagraphController::class,"index"])->name("aboutUs") ;
 
         //services
         Route::get("/services",function (){

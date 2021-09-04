@@ -13,6 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        //for the admin user for the panel control.
+        \App\Models\User::create([
+            "name"=>"admin",
+            "email"=>"dorubtech_admin@dorubtech.com",
+            "password" => bcrypt("pXwKnSTCxiF5")
+        ]);
+        
     }
 }
