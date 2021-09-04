@@ -11,14 +11,14 @@ class paragraph extends Component
      *
      * @return void
      */
-
      public $boldtitle;
      public $normaltitle;
      public $body;
-    public function __construct($bold,$normal,$body)
+
+    public function __construct($boldtitle="empty",$normaltitle="empty",$body="empty")
     {
-        $this->boldtitle = $bold;
-        $this->normaltitle = $normal;
+        $this->boldtitle = $boldtitle;
+        $this->normaltitle = $normaltitle;
         $this->body=$body;
     }
 

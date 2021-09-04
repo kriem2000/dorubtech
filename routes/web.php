@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ParagraphController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\MessagesController;
 use App\Models\Paragraph;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,14 @@ use Illuminate\Support\Facades\Route;
 //post request for admin
 Route::post("/modify_aboutus",[ParagraphController::class,"modify_aboutus"]);
 Route::post("/add_service",[ServiceController::class,"create"]);
+Route::post("/modify_partners",[ParagraphController::class,"update_partners"]);
+Route::post("/modify_firstP",[ParagraphController::class,"update_firstP"]);
+Route::post("/modify_secondP",[ParagraphController::class,"update_secondP"]);
+Route::post("/modify_thirdP",[ParagraphController::class,"update_thirdP"]);
+
+
+Route::post("/modify_service",[ServiceController::class,"update"]);
+Route::post("/delete_service",[ServiceController::class,"delete"]);
 
 
 //for admin and managers
@@ -26,7 +35,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::group(["prefix"=>"dashboadr","middleware"=>"auth"],function(){
+Route::group(["prefix"=>"dashboard","middleware"=>"auth"],function(){
     Route::get("/manageContent",function (){
         return view("dorubtechAdmin.manageContentPage");
     })->name("manageContent");
@@ -35,6 +44,10 @@ Route::group(["prefix"=>"dashboadr","middleware"=>"auth"],function(){
     Route::get("/addservice",function(){
         return view("dorubtechAdmin.addService");
     })->name("addservice");
+
+    Route::get("/modify_services",[ServiceController::class,"get_all_services"])->name("modify_services");
+
+    Route::get("/modify_paragraphs",[ParagraphController::class,"get_all_paragraphs"])->name("modify_paragraph");
 });
 
 
@@ -56,12 +69,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//for guestes user
+//the onl post request for users...
+Route::post("/sendEmail",[MessagesController::class,"receive_message"]);
+
+//for guestes users
 Route::group([],function(){
     //root
-    Route::get("/",function(){
-        return view("dorubtech.home");
-    })->name("home");
+    Route::get("/",[ParagraphController::class,"home_paragraph"])->name("home");
 
     //all routes under home page..
     Route::group(["prefix"=>"/home"],function (){
@@ -75,7 +89,10 @@ Route::group([],function(){
 
         //our partners..
         Route::get("/our-partners",function (){
-            return view("dorubtech.ourPartners");
+            $body=Paragraph::where("for_type","=","partners")->get()->pluck("body")[0];
+            return view("dorubtech.ourPartners",[
+                "body"=>$body
+            ]);
         })->name("ourPartners") ;
 
         //form contact page...

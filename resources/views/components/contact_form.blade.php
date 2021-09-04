@@ -1,28 +1,64 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-6 col-sm-11 col-xs-11">
-            <form action="">
+            <form action="/sendEmail" method="POST">
+                @csrf
                 <div class="row">
                     <div class="col-lg col-md col-sm-12 col-xs-12 form-group">
-                        <input class="text-white form-control bg-dark d-inline float-left" type="text" name="" id="" placeholder="Your name">
+                        <input
+                            class="text-white form-control bg-dark d-inline float-left"
+                            type="text"
+                            name="sender_name"
+                            id=""
+                            value="{{ old("sender_name") }}"
+                            placeholder="Your name">
+                        @error("sender_name")
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
                     <div class="col-lg col-md col-sm-12 col-xs-12 form-group">
-                        <input class="text-white form-control bg-dark d-inline float-right" type="text" placeholder="Your email">
+                        <input
+                            class="text-white form-control bg-dark d-inline float-right"
+                            name="sender_email"
+                            value="{{old("sender_email")}}"
+                            type="text"
+                            placeholder="Your email">
                     </div>
+                    @error("sender_email")
+                    <p class="text-danger">{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="row ">
                     <div class="col-lg col-md col-sm-12 col-xs-12 text-center form-group">
-                        <input class=" text-white form-control bg-dark" type="text" name="" id="" placeholder="Your number">
+                        <input
+                            class=" text-white form-control bg-dark"
+                            name="sender_number"
+                            value="{{old("sender_numebr")}}"
+                            type="text"
+                            name=""
+                            id=""
+                            placeholder="Your number">
+                        @error("sender_number")
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class=" row form-group justify-content-center">
                     <div class="col-lg-12 col-md col-sm-12 col-xs-12 ">
-                        <textarea class="text-white form-control bg-dark " id="exampleFormControlTextarea1" rows="5" placeholder="your message here..."></textarea>
+                        <textarea
+                            name="sender_message"
+                            class="text-white form-control bg-dark "
+                            id="exampleFormControlTextarea1"
+                            rows="5"
+                            placeholder="your message here...">{{old("sender_message")}}</textarea>
+                        @error("sender_message")
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md col-sm-12 col-xs-12 text-center">
-                        <input class="text-white btn btn-primary" id="btn_contact" type="button" value="send message">
+                        <input class="text-white btn btn-primary" id="btn_contact" type="submit" value="send message">
                     </div>
                 </div>
 

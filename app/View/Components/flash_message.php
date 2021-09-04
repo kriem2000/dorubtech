@@ -13,10 +13,10 @@ class flash_message extends Component
      *
      * @return void
      */
-    public function __construct($message,$error)
-    {   
-        $this->message=$message;
-        $this->$error=$error;
+    public function __construct($msg,$err)
+    {
+        $this->message=$msg;
+        $this->error=$err;
     }
 
     /**

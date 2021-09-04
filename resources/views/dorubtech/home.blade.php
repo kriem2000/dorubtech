@@ -5,11 +5,11 @@
 </div>
 
 
-    <x-paragraph/>
+    <x-paragraph boldtitle="{{$titlefirstP[0]}}" normaltitle="{{$titlefirstP[1]}}" body="{{ $bodyfirstP}}" />
     <x-jumbotron-lf/>
-    <x-paragraph/>
+    <x-paragraph boldtitle="{{$titlesecondP[0]}}" normaltitle="{{$titlesecondP[1]}}" body="{{$bodysecondP }}" />
     <x-jumbotron-rt/>
-    <x-paragraph/>
+    <x-paragraph boldtitle="{{$titlethirdP[0]}}" normaltitle="{{$titlethirdP[1]}}" body="{{ $bodythird}}" />
     <x-slider/>
 
 <x-fab/>

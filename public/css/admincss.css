@@ -22,3 +22,7 @@
 .col div.manage-card a:hover {
     text-decoration: none;
 }
+
+ul.navbar-nav li a.btn-outline-info:hover{
+    color: white !important;
+}
