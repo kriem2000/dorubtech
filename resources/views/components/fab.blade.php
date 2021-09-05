@@ -6,13 +6,13 @@
     </div>
     <ul class="fab-options">
         <li>
-            <span class="fab-label">Go to the top</span>
+            <span class="fab-label">{{__("translations.fab_msg")}}</span>
             <div class="fab-icon-holder" id="go-top">
                 <i class="fas fa-arrow-up"></i>
             </div>
         </li>
         <li>
-            <span class="fab-label">Contact Us</span>
+            <span class="fab-label"><a class="text-white" href="{{route("contactUs")}}">{{__("translations.contact_us")}}</a></span>
             <div class="fab-icon-holder">
                 <i class="fas fa-envelope-open"></i>
             </div>

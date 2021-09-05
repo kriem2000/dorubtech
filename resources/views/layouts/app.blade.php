@@ -43,7 +43,7 @@
                             </li>
                             <li>
                                 <a class="btn btn-lg btn-outline-info border-0 text-dark"
-                                   href="#">
+                                   href="{{route("myEmails")}}">
                                     My emails
                                 </a>
                             </li>

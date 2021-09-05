@@ -1,9 +1,11 @@
 <?php
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\ParagraphController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\MessagesController;
 use App\Models\Paragraph;
+use App\Models\Messages;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//to translate the page
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
+
+
 //post request for admin
 Route::post("/modify_aboutus",[ParagraphController::class,"modify_aboutus"]);
 Route::post("/add_service",[ServiceController::class,"create"]);
@@ -29,6 +35,23 @@ Route::post("/modify_thirdP",[ParagraphController::class,"update_thirdP"]);
 Route::post("/modify_service",[ServiceController::class,"update"]);
 Route::post("/delete_service",[ServiceController::class,"delete"]);
 
+Route::post("/searchindex",function(Request $request){
+        $request->validate([
+           "search"=>["required"]
+        ]);
+
+        $messages=Messages::where("sender_email","like","$request->search"."%")->get();
+
+        if(sizeof($messages)){
+            session()->flash("results",sizeof($messages)." results has been found");
+        }else{
+            session()->flash("error","there is no results for the search");
+        }
+
+    return view("dorubtechAdmin.myEmails",[
+        "messages"=>$messages
+    ]);
+});
 
 //for admin and managers
 Route::get('/dashboard', function () {
@@ -48,6 +71,13 @@ Route::group(["prefix"=>"dashboard","middleware"=>"auth"],function(){
     Route::get("/modify_services",[ServiceController::class,"get_all_services"])->name("modify_services");
 
     Route::get("/modify_paragraphs",[ParagraphController::class,"get_all_paragraphs"])->name("modify_paragraph");
+
+    Route::get("/index",function(){
+        $messages=Messages::all()->sortBy(["created_at","asc"]);
+        return view("dorubtechAdmin.myEmails",[
+            "messages"=>$messages
+        ]);
+    })->name("myEmails");
 });
 
 

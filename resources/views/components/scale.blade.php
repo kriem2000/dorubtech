@@ -33,20 +33,33 @@
         <div class="collapse navbar-collapse nav-links float-lg-right" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{route("home")}}">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{route("home")}}">{{__('translations.home')}} <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{route("aboutUs")}}">about us</a>
+                    <a class="nav-link" href="{{route("aboutUs")}}">{{__('translations.about_us')}}</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{route("services")}}">services</a>
+                    <a class="nav-link" href="{{route("services")}}">{{__('translations.services')}}</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{route("ourPartners")}}">partners</a>
+                    <a class="nav-link" href="{{route("ourPartners")}}">{{__('translations.partners')}}</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="flag-icon flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}"></span> {{ Config::get('languages')[App::getLocale()]['display'] }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        @foreach (Config::get('languages') as $lang => $language)
+                            @if ($lang != App::getLocale())
+                                <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span class="flag-icon flag-icon-{{$language['flag-icon']}}"></span> {{$language['display']}}</a>
+                            @endif
+                        @endforeach
+                    </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="mt-1 btn btn-light btn-contact text-dark" href="{{route("contactUs")}}" id="contact-button">Contact Us <i class="far fa-paper-plane"></i></a>
+                    <a class="mt-1 btn btn-light btn-contact text-dark" href="{{route("contactUs")}}" id="contact-button">{{__('translations.contact_us')}}<i class="far fa-paper-plane"></i></a>
                 </li>
+
             </ul>
         </div>
     </div>
@@ -69,7 +82,7 @@
 
         <div class="row justify-content-center mt-4">
             <div col="col">
-                <span class="contactus-footer">Contact Us</span>
+                <span class="contactus-footer">{{__('translations.contact_us')}}</span>
             </div>
         </div>
 
@@ -127,7 +140,7 @@
     <!-- Copyright -->
 
     <div class="footer-copyright text-center bg-footer-bottom py-3">
-        <span class="float-left offset-1 text-white">© 2021 Copyright: made by Marwan, All Rights Reserved</span>
+        <span class="float-left offset-1 text-white">{{__('translations.rights')}}</span>
         .
     </div>
     <!-- Copyright -->

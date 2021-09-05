@@ -8,10 +8,10 @@
         <div class="carousel-item active">
             <img src="/img/sha7at.jpg" class="w-100" alt="Los Angeles" height="650">
             <div class="carousel-caption">
-                <h3>Welcome to Dorubtech</h3>
+                <h3>{{__("translations.Welcome_banner")}}</h3>
                 <p>We had such a great time in LA!, We had such a great time in LA! We had such a great time in LA!</p>
                 <a href="{{route("aboutUs")}}" class="btn btn-read-more mt-3">
-                    READ MORE
+                    {{__("translations.read_more")}}
                     <i class="ml-3 fas fa-angle-double-right"></i>
                 </a>
             </div>
@@ -19,10 +19,10 @@
         <div class="carousel-item">
             <img src="/img/jalot.jpg" class="w-100" alt="Chicago" height="650">
             <div class="carousel-caption">
-                <h3>Welcome to Dorubtech</h3>
+                <h3>{{__("translations.Welcome_banner")}}</h3>
                 <p>We had such a great time in LA!, We had such a great time in LA! We had such a great time in LA!</p>
                 <a href="{{route("aboutUs")}}" class="btn btn-read-more mt-3">
-                    READ MORE
+                    {{__("translations.read_more")}}
                     <i class="ml-3 fas fa-angle-double-right"></i>
                 </a>
             </div>
